@@ -138,10 +138,11 @@ async function cadastrarProduto() {
 }
 
 async function excluirProduto() {
- try {
+    try {
         const confirmar = confirm('Deseja realmente excluir este produto?');
-        if (!confirmar)  return;
-        
+        if (!confirmar)
+            return;
+
         const resposta = await fetch(`${API_URL}/produtos/${id}`, {
             method: 'DELETE'
         });
